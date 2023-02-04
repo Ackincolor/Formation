@@ -3,6 +3,7 @@ import React from 'react';
 import Banner from './components/banner';
 import Cart from './components/cart';
 import ShoppingList from './components/shoppingList'
+import QuestionForm from './components/questionForm';
 
 import './App.css';
 
@@ -15,6 +16,9 @@ function App() {
       </div>
       <div>
         <ShoppingList></ShoppingList>
+      </div>
+      <div>
+        <QuestionForm></QuestionForm>
       </div>
     </div>
   );
