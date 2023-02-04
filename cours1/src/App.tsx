@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Banner from './components/banner/Banner';
-import Cart from './components/cart/Cart';
+import Banner from './components/banner';
+import Cart from './components/cart';
+import ShoppingList from './components/shoppingList'
 
 import './App.css';
 
@@ -11,6 +12,9 @@ function App() {
       <Banner></Banner>
       <div>
       <Cart></Cart>
+      </div>
+      <div>
+        <ShoppingList></ShoppingList>
       </div>
     </div>
   );
