@@ -4,7 +4,9 @@ import './App.css';
 
 import Menu from './components/menu/menu';
 
-import './assets/sass/style.scss'
+import './assets/css/style.scss'
+import './assets/js/app'
+
 
 function App() {
   return (
