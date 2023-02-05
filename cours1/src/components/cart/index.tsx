@@ -1,8 +1,8 @@
-import React from "react";
-
 import './cart.css'
 
-function Cart() {
+
+
+function Cart({updateCart}) {
     const monsteraPrice = 8
     const ivyPrice = 10
     const flowerPrice = 15
@@ -14,7 +14,8 @@ function Cart() {
         <li>Lierre : {ivyPrice}€</li>
         <li>Fleurs : {flowerPrice}€</li>
         </ul>
-        Total : {monsteraPrice + ivyPrice + flowerPrice }€
+        Total : {monsteraPrice * cart }€
+        <button onClick={() => updateCart(0)}>Vider le panier</button>
     </div>
     )
 }

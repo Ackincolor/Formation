@@ -1,0 +1,305 @@
+.table > :not(caption) > * > * {
+  border-bottom: 0;
+}
+
+.table > thead:first-child > tr:first-child > th {
+  color: $gray-600;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  &.sorting {
+    cursor: pointer;
+    user-select: none;
+
+    &:active {
+      color: $gray-900;
+    }
+
+    &:after {
+      content: "";
+      background: url('../../img/icons/sort-arrows.svg') center center no-repeat;
+      background-size: contain;
+      display: inline-block;
+      height: 8px;
+      margin-left: 1rem;
+      width: 8px;
+    }
+  }
+}
+
+.table > thead > tr > th {
+  border-bottom: 0;
+  white-space: nowrap;
+}
+
+.table > :not(:first-child) { border-top: 0; }
+
+.table-responsive {
+  @extend %custom-scrollbar;
+}
+
+.table-default,
+.table-default-bis {
+  thead > tr > th {
+    color: $gray-500;
+    border: 0;
+    font-size: 1rem;
+    padding: .8rem .8rem 1rem .8rem;
+
+    &:first-child {
+      padding-left: 2rem;
+
+      @media (min-width: 1024px) and (max-width: 1720px) {
+        padding-left: 1.4rem;
+      }
+    }
+
+    &:last-child {
+      padding-right: 2rem;
+
+      @media (min-width: 1024px) and (max-width: 1720px) {
+        padding-right: 1.4rem;
+      }
+    }
+    
+    label {
+      color: $gray-500;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-bottom: -3px;
+
+      input[type="checkbox"] {
+        margin-bottom: 0;
+        margin-right: 1rem;
+        margin-top: 0;
+        height: 2rem;
+        vertical-align: middle;
+        width: 2rem;
+      }
+    }
+  }
+
+  tbody tr {
+    background-color: rgba($white, .6);
+    transition: .075s ease-in-out;
+
+    &[data-url],
+    &[data-bs-toggle] { cursor: pointer; }
+
+    &:nth-child(even) {
+      background-color: rgba(#F0F2F5, .6);
+      transition: background-color .1s ease-in-out;
+
+      &:focus,
+      &:hover {
+        background-color: rgba(#F0F2F5, 1);
+        // background-color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    &.toggle-tr {
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      background-color: $white;
+      display: none;
+
+      td {
+        height: 4rem;
+
+        &:first-child:before { content: none !important; }
+
+        &:last-child {
+          text-align: left;
+        }
+      }
+    }
+
+    .badge {
+      background-color: $white;
+    }
+
+    &.is-open,
+    &:focus,
+    &:hover {
+      background-color: $white;
+      cursor: pointer;
+
+      @include media-breakpoint-up(lg) {
+        td:first-child:before {
+          background-color: $purple-400;
+          border-radius: 4px;
+          bottom: 0;
+          content: "";
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 4px;
+        }
+      }
+
+      td {
+        .text-hover {
+          color: $purple-400 !important;
+          transition: color .1s ease-in-out;
+        }
+
+        .text-hover-gray {
+          color: $gray-900 !important;
+          transition: color .1s ease-in-out;
+        }
+
+        .badge {
+          transition: all .1s ease-in-out;
+
+          &.border-green-500 {
+            background-color: $green-500 !important;
+            color: $white !important;
+          }
+
+          &.border-red-500 {
+            background-color: $red-500 !important;
+            color: $white !important;
+          }
+
+          &.border-red-700 {
+            background-color: $red-700 !important;
+            color: $white !important;
+          }
+
+          &.border-orange-500 {
+            background-color: $orange-500 !important;
+            color: $white !important;
+          }
+        }
+      }
+    }
+
+    td {
+      border-top: 0;
+      color: $gray-900;
+      font-size: 1.2rem;
+      height: 6.2rem;
+      padding: 1.8rem .8rem;
+      position: relative;
+      vertical-align: middle;
+      white-space: nowrap;
+
+      @media (min-width: 1024px) and (max-width: 1720px) {
+        font-size: 1.2rem;
+        padding: 1.4rem .8rem;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding: 1.8rem;
+      }
+
+      &:first-child {
+        border-bottom-left-radius: 6px;
+        border-top-left-radius: 6px;
+        padding: 0;
+        padding-left: 1.8rem;
+        padding-right: 0.6rem;
+        text-align: left !important;
+
+        @media (min-width: 1024px) and (max-width: 1720px) {
+          padding-left: 1.4rem;
+          padding-right: 0.4rem;
+        }
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 6px;
+        border-top-right-radius: 6px;
+        padding-right: 2.5rem;
+        text-align: right;
+
+        @media (min-width: 1024px) and (max-width: 1720px) {
+          padding-right: 1.4rem;
+        }
+      }
+
+      .form-check {
+        align-items: center;
+        display: flex;
+
+        &-input {
+          height: 2rem;
+          margin-right: 1.15rem;
+          width: 2rem;
+        }
+
+        &-label {
+          line-height: 1;
+        }
+      }
+    }
+
+    &.is-selected {
+      background-color: rgba($purple-500, .075) !important;
+      
+      > *:not(.badge) {
+        color: $purple-400 !important;
+      }
+
+      td:first-child:before {
+        content: none;
+      }
+
+      .form-check-label,
+      .btn-icon .icon-download {
+        color: $purple-400 !important;
+      }
+    }
+
+    &.has-error {
+      background-color: rgba(#FF6565, .06);
+
+      td {
+        color: $red-500;
+
+        .text-gray-600 { color: $red-500 !important; }
+
+        .btn-icon {
+          .icon,
+          .badge {
+            color: $red-500 !important;
+          }
+        }
+
+        .text-gray-700 { color: $red-500 !important; }
+      }
+    }
+  }
+
+  &.table-tr-indicator-0 {
+    tbody tr.is-open td:first-child:before,
+    tbody tr:hover td:first-child:before { content: none; }
+  }
+
+  &.table-sm {
+    tbody tr td {
+      height: 5.2rem;
+    }
+  }
+}
+
+.table-default-bis {
+  tbody tr {
+    background-color: rgba($purple-500, .075) !important;
+
+    &:hover {
+      @include media-breakpoint-up(lg) {
+        td:first-child:before {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.table-empty {
+  min-height: 50.5rem;
+
+  tbody tr:hover td:first-child:before {
+    content: none;
+  }
+}

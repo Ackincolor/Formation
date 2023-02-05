@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.6">
+        <g id="NAVBAR_DEROULE_002_OPERATIONS_03_GESTION_BENEFICIAIRES" transform="translate(-25.000000, -852.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-17" transform="translate(10.000000, 70.000000)">
+                <g id="Group-15" transform="translate(0.000000, 767.000000)">
+                    <path d="M25,15 C19.4889971,15 15,19.4889971 15,25 C15,30.511003 19.4889971,35 25,35 C30.511003,35 35,30.511003 35,25 C35,19.4889971 30.511003,15 25,15 Z M25,17 C29.430123,17 33,20.5698774 33,25 C33,26.85307 32.369262,28.55056 31.318359,29.904297 L20.0957031,18.6816406 C21.4494397,17.6307377 23.14693,17 25,17 Z M18.6816406,20.0957031 L29.904297,31.318359 C28.55056,32.369262 26.85307,33 25,33 C20.5698774,33 17,29.430123 17,25 C17,23.14693 17.6307377,21.4494397 18.6816406,20.0957031 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

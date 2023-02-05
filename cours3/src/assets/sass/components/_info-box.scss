@@ -1,0 +1,98 @@
+.info-box {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  &-single {
+    background-color: $white;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 1.3rem 2.3rem;
+    position: relative;
+
+    &:before {
+      background-color: $purple-400;
+      border-radius: 4px;
+      bottom: 0;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+    }
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-order-resume {
+    align-items: center;
+    background-color: $white;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 6.6rem;
+    padding: 1.15rem 2rem;
+  }
+
+  &-account {
+    align-items: center;
+    background-color: rgba($purple-500, .1);
+    border-radius: 4px;
+    display: flex;
+    min-height: 7.4rem;
+    padding: 1.3rem 3rem;
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+      padding: 1.3rem 2rem;
+    }
+
+    > div {
+      text-align: center;
+      width: 100%;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 1rem;
+      }
+    }
+
+    .icon {
+      font-size: 2.2rem;
+    }
+
+    &-label,
+    &-meta-l1,
+    &-meta-l2 {
+      display: block;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.3rem;
+      margin-bottom: .3rem;
+    }
+
+    &-label {
+      color: $gray-600;
+      margin-bottom: .5rem;
+    }
+    
+    &-meta {
+      &-l1 {
+        color: $purple-400;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      &-l2 {
+        color: $gray-900;
+      }
+    }
+  }
+}

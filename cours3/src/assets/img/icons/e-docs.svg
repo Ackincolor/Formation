@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="22px" viewBox="0 0 19 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.6">
+        <g id="NAVBAR_DEROULE_002_OPERATIONS_03_GESTION_BENEFICIAIRES" transform="translate(-26.000000, -686.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-17" transform="translate(10.000000, 70.000000)">
+                <g id="Group-15" transform="translate(0.000000, 602.000000)">
+                    <path d="M18,14 C16.9,14 16,14.9 16,16 L16,29 C16,29.552 16.448,30 17,30 C17.552,30 18,29.552 18,29 L18,16 L29,16 C29.552,16 30,15.552 30,15 C30,14.448 29.552,14 29,14 L18,14 Z M22,18 C20.9,18 20,18.9 20,20 L20,34 C20,35.1 20.9,36 22,36 L33,36 C34.1,36 35,35.1 35,34 L35,23.828125 C35,23.298125 34.789062,22.7890625 34.414062,22.4140625 L30.585938,18.5859375 C30.210937,18.2109375 29.701875,18 29.171875,18 L22,18 Z M25,26 L30,26 C30.552,26 31,26.448 31,27 C31,27.552 30.552,28 30,28 L25,28 C24.448,28 24,27.552 24,27 C24,26.448 24.448,26 25,26 Z M25,30 L30,30 C30.552,30 31,30.448 31,31 C31,31.552 30.552,32 30,32 L25,32 C24.448,32 24,31.552 24,31 C24,30.448 24.448,30 25,30 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

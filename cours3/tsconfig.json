@@ -18,11 +18,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "paths": {
-      "@components/*": ["./src/components/*"],
-      "@datas/*": ["./src/datas/*"],
-      "@img/*": ["./assets/img/*"]
-    },
     "jsx": "react-jsx"
   },
   "include": [

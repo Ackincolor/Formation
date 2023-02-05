@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons8-france</title>
+    <g id="MES-ACCES" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DELUBAC_BO_00_MES_ACCES_01_MES_DONNEES_PERSONNELLES_MODIFICATION_CODE_CONNEXION_ETAPE2" transform="translate(-580.000000, -631.000000)" fill-rule="nonzero">
+            <g id="Group-8" transform="translate(545.000000, 315.000000)">
+                <g id="Group-11" transform="translate(20.000000, 304.000000)">
+                    <g id="icons8-france" transform="translate(15.000000, 12.000000)">
+                        <path d="M18.2,1.08875 C16.60685,0.3926 14.8499,0 13,0 C11.1501,0 9.39315,0.3926 7.8,1.08875 L7.8,24.9106 C9.39315,25.6074 11.1501,26 13,26 C14.8499,26 16.60685,25.6074 18.2,24.91125 L18.2,1.08875 Z" id="Path" fill="#ECEFF1"></path>
+                        <path d="M26,13 C26,7.67065 22.78965,3.09595 18.2,1.08875 L18.2,24.9106 C22.78965,22.90405 26,18.32935 26,13 Z" id="Path" fill="#FF3D00"></path>
+                        <path d="M0,13 C0,18.32935 3.21035,22.90405 7.8,24.91125 L7.8,1.08875 C3.21035,3.09595 0,7.67065 0,13 Z" id="Path" fill="#3F51B5"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

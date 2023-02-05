@@ -1,0 +1,52 @@
+.comments {
+  list-style: none;
+  padding-left: 0;
+}
+
+.comments-item {
+  border-radius: 6px;
+  padding: 2rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #F0F2F5;
+    margin-bottom: 2rem;
+  }
+}
+
+.comments-item-me {
+  background-color: rgba($purple-500, .1);
+}
+
+.comments-head {
+  display: flex;
+  justify-content: space-between;
+  margin: -1rem 0 0 -3rem;
+}
+
+.comments-author {
+  align-items: center;
+  display: flex;
+  color: $purple-500;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: .9rem;
+}
+
+.comments-body {
+  margin-left: 1rem;
+}
+
+.comments-text {
+  color: $gray-900;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.04rem;
+  line-height: 1.6;
+}
+
+.comments-posted-at {
+  color: $gray-500;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}

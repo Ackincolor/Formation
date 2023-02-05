@@ -1,0 +1,231 @@
+.form-check-label,
+.form-check-input {
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-check-input {
+  -webkit-appearance: none;
+}
+
+.form-check:not(.form-check-custom) .form-check-label {
+  font-size: 1.2rem;
+  // margin-left: .5rem;
+  margin-top: 2px;
+}
+
+.form-check-wrapper {
+  &.is-selected {
+    background-color: rgba($purple-500, .075) !important;
+      
+    .form-check-label {
+      color: $purple-400;
+    }
+  }
+}
+
+.form-check-custom {
+  padding-left: 0;
+  
+  .form-check-label {
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+
+    .form-check-input {
+      height: 2.2rem;
+      margin: 0 1rem 0 0;
+      width: 2.2rem;
+    }
+  }
+}
+
+.form-check-box {
+  padding-left: 0;
+  position: relative;
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    flex: 0 0 auto;
+    left: 1.8rem;
+    margin-left: 0;
+    position: absolute;
+    top: 1.8rem;
+
+    &:checked + label {
+      background: rgba($purple-500, .1);
+
+      .form-label-l2 {
+        color: $purple-500;
+      }
+    }
+  }
+
+  label {
+    border-radius: 6px;
+    background-color: #F7F8FA;
+    cursor: pointer;
+    padding: 2rem 8.5rem 2rem 5rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  img {
+    bottom: -1rem;
+    position: absolute;
+    right: 1.15rem;
+  }
+
+  .form-label-l1 {
+    align-items: center;
+    color: $black;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: .15rem;
+    white-space: nowrap;
+  }
+
+  .form-label-l2 {
+    color: $gray-500;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    margin-left: -3rem;
+    margin-top: 1rem;
+  }
+}
+
+.form-switch .form-check-input {
+  background-color: $gray-300;
+  background-image: escape-svg(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"));
+  border: 0;
+  width: 2.25em;
+
+  &:focus {
+    background-image: escape-svg(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"));
+  }
+
+  &:checked {
+    background-color: $purple-500;
+  }
+}
+
+.form-switch-duo {
+  position: relative;
+
+  input[type="checkbox"] {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  // input[type="checkbox"][disabled] ~ label {
+  //   color: rgba(234, 0, 48, 0.5);
+  //   pointer-events: none;
+  // }
+
+  input[type="checkbox"][disabled] ~ label .form-switch-duo-switcher {
+    opacity: 0.4;
+  }
+
+  input[type="checkbox"]:checked ~ label .form-switch-duo-switcher:before {
+    content: attr(data-unchecked);
+    left: 0;
+  }
+
+  label {
+    display: flex;
+    user-select: none;
+    position: relative;
+    align-items: center;
+
+    .form-switch-duo-switcher:before,
+    .form-switch-duo-switcher:after {
+      border-radius: 1.5rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 2.8rem;
+      padding: 0 12px;
+      position: absolute;
+      text-align: center;
+      width: 5rem;
+    }
+
+    .form-switch-duo-switcher:before {
+      color: $gray-700;
+      content: attr(data-checked);
+      left: 4.8rem;
+      bottom: 0.1rem;
+      top: 0.1rem;
+    }
+
+    .form-switch-duo-switcher:after {
+      background: $green-500;
+      bottom: 0.1rem;
+      color: $white;
+      content: attr(data-unchecked);
+      left: 0.1rem;
+      top: 0.1rem;
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+      z-index: 5;
+    }
+  }
+
+  input[type="checkbox"]:hover ~ label .form-switch-duo-switcher {
+    background-color: $gray-200;
+  }
+
+  // input[type="checkbox"]:focus ~ label .form-switch-duo-switcher:after,
+  // input[type="checkbox"]:hover ~ label .form-switch-duo-switcher:after {
+  //   color: #b70026;
+  // }
+
+  // .input[type="checkbox"]:hover ~ label {
+  //   color: #d1002b;
+  // }
+  
+  // input[type="checkbox"]:checked ~ label:hover {
+  //   color: #55bc49;
+  // }
+  
+  input[type="checkbox"]:checked:focus ~ label .form-switch-duo-switcher,
+  input[type="checkbox"]:checked:hover ~ label .form-switch-duo-switcher {
+    background-color: $gray-200;
+  }
+  
+  input[type="checkbox"]:checked ~ label .form-switch-duo-switcher:after {
+    background-color: $white;
+    color: $gray-900;
+    content: attr(data-checked);
+    transform: translate3d(5rem, 0, 0);
+  }
+  
+  label .form-switch-duo-switcher {
+    background-color: $gray-100;
+    border-radius: 1.5rem;
+    height: 3rem;
+    position: relative;
+    transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+    width: 10rem;
+  }
+
+  &.is-white {
+    label .form-switch-duo-switcher {
+      background-color: $white;
+    }
+
+    .form-switch-duo-switcher:before {
+      color: $gray-500;
+    }
+
+    // input[type="checkbox"]:checked:focus ~ label .form-switch-duo-switcher,
+    // input[type="checkbox"]:checked:hover ~ label .form-switch-duo-switcher {
+    //   background-color: $gray-300;
+    // }
+  }
+}
