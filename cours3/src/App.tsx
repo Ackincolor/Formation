@@ -2,22 +2,30 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Dashboard from './pages/Dashboard';
+import Transaction from './pages/Transaction';
+import Mpc from './pages/Mpc';
+import Consultation from './pages/Consultation';
+
 import Menu from './components/menu/menu';
 
-import './assets/css/style.scss'
-import './assets/js/app'
+import './assets/css/style2.css'
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Menu></Menu>
-      </header>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Menu />}>
+          <Route index element={<Dashboard />}/>
+          <Route path="consultation" element={<Consultation />}/>
+          <Route path="transaction" element={<Transaction />}/>
+          <Route path="mpc" element={<Mpc />}/>
+        </Route>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }

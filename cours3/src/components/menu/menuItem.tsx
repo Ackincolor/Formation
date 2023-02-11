@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import subMenuItem from "./subMenuItem";
 
@@ -12,16 +13,16 @@ type MenuProps = {
 
 function MenuItem(props:MenuProps) {
     return (
-        <li>
-            <a href={props.link}>
+        <li >
+            <Link to={props.link}>
             <svg className="icon icon-pie-chart" aria-hidden="true">
                 <use xlinkHref="./assets/img/icons/sprite.svg#pie-chart"></use>
             </svg>
             <span className="menu-text">{props.text}</span>
-            </a>
+            </Link>
             <ul className="menu-submenu" data-name="Consultation">
-                {props.subMenu?.map((props:MenuProps) => (
-                    <li><span>{props.text}</span></li>
+                {props.subMenu?.map((props2:MenuProps) => (
+                    <li key={props2.id}><span>{props2.text}</span></li>
                 ))}
             </ul>
         </li>

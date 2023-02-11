@@ -3,7 +3,7 @@ export const menuItems = [
     {
         id:1,
         text:"consultation",
-        link:"test",
+        link:"/Consultation",
         subMenu:[
             {
                 id:1,
@@ -11,26 +11,26 @@ export const menuItems = [
                 link:"test"
             },
             {
-                id:1,
+                id:2,
                 text:"consultationsub2",
                 link:"test"
             },
             {
-                id:1,
+                id:3,
                 text:"consultationsub3",
                 link:"test"
             },
             {
-                id:1,
+                id:4,
                 text:"consultationsub4",
                 link:"test"
             }
         ]
     },
     {
-        id:1,
+        id:2,
         text:"transaction",
-        link:"test",
+        link:"/Transaction",
         subMenu:[
             {
                 id:1,
@@ -38,26 +38,26 @@ export const menuItems = [
                 link:"test"
             },
             {
-                id:1,
+                id:2,
                 text:"consultationsub2",
                 link:"test"
             },
             {
-                id:1,
+                id:3,
                 text:"consultationsub3",
                 link:"test"
             },
             {
-                id:1,
+                id:4,
                 text:"consultationsub4",
                 link:"test"
             }
         ]
     },
     {
-        id:1,
-        text:"telechargement",
-        link:"test",
+        id:3,
+        text:"Mpc",
+        link:"/Mpc",
         subMenu:[]
     }
 ]
