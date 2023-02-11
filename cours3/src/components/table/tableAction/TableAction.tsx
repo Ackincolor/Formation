@@ -1,8 +1,9 @@
-
+import sprite from "../../../assets/img/icons/sprite.svg"
 type TableActionProps = {
     label:string,
     callback:Callback,
-    id:number
+    id:number,
+    url:string
 }
 
 interface Callback {
@@ -10,21 +11,21 @@ interface Callback {
   }
 
 //defini une action afeectuer sur une ligne de tableau
-function TableAction({callback, id}:TableActionProps) {
+function TableAction({callback, id, url}:TableActionProps) {
     function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
-        callback(id);
+        callback(url);
     }
 
     return (
         <>
         <button onClick={handleClick} className="btn-icon btn-icon-xs me-20" data-bs-toggle="tooltip" data-bs-placement="top" title="Pièce(s) jointe(s)">
             <svg className="icon fs-xxl text-red-500" aria-hidden="true">
-            <use xlinkHref="./assets/img/icons/sprite.svg#paperclip"></use>
+            <use xlinkHref={`${sprite}#paperclip`}></use>
             </svg>
 
             <span className="badge rounded-pill bg-white text-red-500">
             <svg className="icon text-red-500" aria-hidden="true">
-                <use xlinkHref="./assets/img/icons/sprite.svg#arrow-up-short"></use>
+                <use xlinkHref={`${sprite}#arrow-up-short`}></use>
             </svg>
             </span>
         </button>

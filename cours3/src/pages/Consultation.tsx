@@ -43,7 +43,8 @@ const Consultation = () => {
         {
             label:"test1",
             callback: testAction,
-            id:-1
+            id:-1,
+            url:""
         }
     ]
 

@@ -1,7 +1,8 @@
-import { type } from "@testing-library/user-event/dist/type";
-import { Callbacks } from "jquery";
+
 import { useEffect, useState } from "react"
 import TableAction ,{TableActionProps} from "./tableAction/TableAction";
+
+import '../../assets/css/style2.css'
 
 type HeadCell<DataType> = {
     id: Extract<keyof DataType, string>;
@@ -36,14 +37,17 @@ function Table<T extends WithId>({ heads,tableActions,   fetchUrl }: TableProps<
     },[])
 
     return(
-        <div>
-            <table>
-                <tr>
-                    {heads.map((head, headKey) => {
-                    return <th key={headKey}>{head.label}</th>;
-                    })}
-                </tr>
-                {dataTable!.map((row, rowKey) => {
+        <div className="table-responsive">
+            <table className="table table-default">
+                <thead>
+                    <tr>
+                        {heads.map((head, headKey) => {
+                        return <th key={headKey}>{head.label}</th>;
+                        })}
+                    </tr>
+                </thead>
+                <tbody>
+                {dataTable!.map((row:any, rowKey) => {
                     return (
                     <tr key={rowKey}>
                         {ColumnsKeys.map((column: keyof T, columnKey) => {
@@ -52,12 +56,14 @@ function Table<T extends WithId>({ heads,tableActions,   fetchUrl }: TableProps<
                         <td>
                             {tableActions.map((propsTableAction:TableActionProps) => {
                                 propsTableAction.id = row.id;
+                                propsTableAction.url = row?.url;
                                 return <TableAction key={propsTableAction.label} {...propsTableAction}/>
                             })}
                         </td>
                     </tr>
                     );
                 })}
+                </tbody>
             </table>
         </div>
     )
