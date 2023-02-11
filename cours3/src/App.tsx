@@ -10,7 +10,7 @@ import Consultation from './pages/Consultation';
 
 import Menu from './components/menu/menu';
 
-import './assets/css/style2.css'
+import './assets/css/style.css'
 
 
 function App() {

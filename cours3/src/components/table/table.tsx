@@ -1,28 +1,28 @@
+import { type } from "@testing-library/user-event/dist/type";
 import { useEffect, useState } from "react"
 
-type DataType = {
-    id: number,
-    title: string,
-    completed:boolean
+
+type HeadCell<DataType> = {
+    id: Extract<keyof DataType, string>;
+    label: string;
+  };
+  
+  type TableProps<DataType> = {
+    heads: HeadCell<DataType>[];
+    rows: Array<DataType>;
+    fetchUrl:string
+  };
+  
+function getPropertyAsString<T, K extends keyof T>(obj: T, key: K): String {
+    return JSON.stringify(obj[key]);
 }
 
-
-function Table() {
-
-    let [dataTable, setDataTable] = useState<DataType[] | null>(null);
-    var displayData= [].map(
-        (info:any)=>{
-            return(
-                <tr>
-                    <td>{info.id}</td>
-                    <td>{info.title}</td>
-                    <td>{info.completed}</td>
-                </tr>
-            )
-        }
-    )
+function Table<T>({ heads, rows,  fetchUrl }: TableProps<T>) {
+    const ColumnsKeys = heads.map((item: HeadCell<T>) => item.id);
+    let [dataTable, setDataTable] = useState<T[]>([]);
+   
     useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/todos')
+        fetch(fetchUrl)
       .then(response => response.json())
       .then(json => {console.log(json)
         setDataTable(json)    
@@ -31,30 +31,25 @@ function Table() {
 
     return(
         <div>
-            <table className="table table-striped">
-                <thead>
-                    <tr>
-                    <th>Sr.NO</th>
-                    <th>Name</th>
-                    <th>completed</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {dataTable && dataTable.map(
-                        (info:any)=>{
-                            return(
-                                <tr>
-                                    <td>{info.id}</td>
-                                    <td>{info.title}</td>
-                                    <td>{info.completed && "yes"}</td>
-                                </tr>
-                            )
+            <table>
+                <tr>
+                    {heads.map((head, headKey) => {
+                    return <th key={headKey}>{head.label}</th>;
+                    })}
+                </tr>
+                {dataTable!.map((row, rowKey) => {
+                    return (
+                    <tr key={rowKey}>
+                        {ColumnsKeys.map((column: keyof T, columnKey) => {
+                        return <td key={columnKey}>{getPropertyAsString(row,column)}</td>;
                         })}
-                </tbody>
+                    </tr>
+                    );
+                })}
             </table>
-             
         </div>
     )
 }
 
 export default Table;
+export type {TableProps, HeadCell};
