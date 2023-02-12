@@ -1,0 +1,137 @@
+.nav-tabs-wrapper {
+  display: flex;
+  margin: 0 1.5rem;
+  overflow-x: auto;
+  padding-bottom: .5em;
+
+  @include media-breakpoint-up(lg) {
+    justify-content: center;
+    padding-bottom: 0;
+  }
+}
+
+.nav-tabs-main {
+  border-bottom: 0;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+
+  .nav-item {
+    overflow: hidden;
+
+    &:not(:first-child),
+    &:not(:last-child) {
+      background: #E4E6EB;
+    }
+
+    &:first-child {
+      border-radius: 40px 0 0 40px;
+    }
+
+    &:last-child {
+      border-radius: 0 40px 40px 0;
+    }
+
+    .nav-link {
+      background: #E4E6EB !important;
+      border-radius: 40px;
+      color: $gray-700;
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.6rem;
+      padding: 1.2rem 3rem;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+
+      @include media-breakpoint-down(sm) {
+        padding: 1.2rem 2.2rem;
+      }
+
+      &:hover {
+        color: $purple-400;
+      }
+
+      .badge {
+        padding: 3px 5px;
+        margin-left: 3px;
+      }
+
+      &.nav-link-lg {
+       min-width: calc(50vw - 1.5rem);
+
+        @include media-breakpoint-up(sm) {
+          min-width: 22.5rem;
+        }
+      }
+
+      &.active {
+        background: $purple-500 !important;
+        color: $white !important;
+  
+        .badge {
+          background: $white !important;
+          color: $purple-500 !important;
+        }
+      }
+    }
+  }
+}
+
+.nav-tabs-link {
+  border-bottom: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 1.4rem;
+  overflow-x: auto;
+  padding-bottom: .25em;
+
+  @include media-breakpoint-up(lg) {
+    justify-content: center;
+  }
+
+  .nav-item {
+    flex: 0 0 auto;
+
+    .nav-link {
+      border: 0 !important;
+      border-bottom: 2px solid $gray-300 !important;
+      color: $gray-900;
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.15;
+      margin-right: 0;
+      padding: 0 5.5rem 1rem 5.5rem;
+      transition: color .075s ease-in-out;
+      text-align: center;
+
+      @include media-breakpoint-down(md) {
+        padding: 0 3.5rem 1rem 3.5rem;
+      }
+
+      &:hover {
+        border: 0;
+        background-color: inherit;
+        border-bottom: 0;
+        color: $purple-400;
+      }
+
+      &.active {
+        border: 0;
+        border-bottom: 2px solid transparent !important;
+        background-color: inherit !important;
+        background-image: url('../../img/img_angle-top_tab.svg');
+        background-position: bottom center;
+        background-repeat: repeat-x;
+        color: $purple-500 !important;
+        padding: 0 5.5rem 1.2rem 5.5rem;
+  
+        @include media-breakpoint-down(md) {
+          padding: 0 3.5rem 1.2rem 3.5rem;
+        }
+      }
+    }
+  }
+}
+

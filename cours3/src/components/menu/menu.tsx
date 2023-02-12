@@ -6,17 +6,14 @@ import { Outlet } from "react-router-dom";
 
 import {menuItems} from './menuItems.js';
 
-import '../../assets/css/style.css'
 
 import sprite from '../../assets/img/icons/sprite.svg';
 import Header from '../header/Header';
 
-import './menu.css'
 
 function Menu() {
     return(
         <>
-         <Header />
         <div className="sidebar">
              <svg className="icon" aria-hidden="true">
                 <use xlinkHref="./assets/img/icons/sprite.svg#delubac-logo"></use>
@@ -30,7 +27,7 @@ function Menu() {
                     ))}
                 </ul>
                 <div className="mt-auto text-center">
-                <button type="button" className="sidebar-close js-sidebarToggler">
+                <button type="button" className="sidebar-close">
                     <svg className="icon icon-reduce-angle-left" aria-hidden="true">
                     <use xlinkHref={`${sprite}#reduce-angle-left`}></use>
                     </svg>
@@ -42,7 +39,9 @@ function Menu() {
         </div>
         <div className="page-wrapper">
         <Header />
-        <Outlet />
+        <div className="page-content">
+            <Outlet/>
+        </div>
         </div>
         </>
     )

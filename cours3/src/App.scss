@@ -1,0 +1,68 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import "../node_modules/bootstrap/scss/maps";
+@import '../node_modules/bootstrap/scss/utilities';
+
+// 1. Configuration and helpers
+@import 
+  './assets/scss/abstracts/pouyanne',
+  './assets/scss/abstracts/apis';
+
+// Bootstrap and its default variables
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// 1. Mixins
+@import './assets/scss/abstracts/mixins';
+
+@import
+  './assets/scss/vendors/select2',
+  './assets/scss/vendors/air-datepicker';
+
+// 3. Base stuff
+@import
+  './assets/scss/base/base',
+  './assets/scss/base/typography',
+  './assets/scss/base/helpers',
+  './assets/scss/base/icons';
+
+// 4. Layout-related sections
+@import
+  './assets/scss/layout/base',
+  './assets/scss/layout/navbar',
+  './assets/scss/layout/sidebar';
+
+// 5. Components
+@import
+  './assets/scss/components/buttons',
+  './assets/scss/components/badges',
+  './assets/scss/components/alerts',
+  './assets/scss/components/labels',
+  './assets/scss/components/tooltips',
+  './assets/scss/components/tables',
+  './assets/scss/components/fake-tables',
+  './assets/scss/components/pagination',
+  './assets/scss/components/modals',
+  './assets/scss/components/dropdowns',
+  './assets/scss/components/avatars',
+  './assets/scss/components/cards',
+  './assets/scss/components/input-group',
+  './assets/scss/components/form-control',
+  './assets/scss/components/forms',
+  './assets/scss/components/form-check',
+  './assets/scss/components/file-box',
+  './assets/scss/components/info-box',
+  './assets/scss/components/history-box',
+  './assets/scss/components/procedure-box',
+  './assets/scss/components/panels',
+  './assets/scss/components/steps',
+  './assets/scss/components/nav-tabs',
+  './assets/scss/components/nav-tiles',
+  './assets/scss/components/comments',
+  './assets/scss/components/panels',
+  './assets/scss/components/login';
+
+// 6. Page-specific styles
+@import
+  './assets/scss/pages/home',
+  './assets/scss/pages/tiers-list';
+

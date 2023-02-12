@@ -1,0 +1,45 @@
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+
+.asterisk {
+  color: $purple-400;
+  font-size: 1.4rem;
+  font-weight: 700;
+  vertical-align: sub;
+}
+
+// Webkit scrollbar custom
+// ==================
+
+%custom-scrollbar,
+.custom-scrollbar {
+  &::-webkit-scrollbar-track {
+    background: $white;
+    padding: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #E4E6EB;
+    border-radius: 5px;
+  }
+  
+  &::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+  }
+}
+
+// Heights utilities
+// ==================
+.h-page {
+  height: calc(100vh - 64px);
+}
+
+// Opacity utilities
+// ==================
+.opacity-60 {
+  opacity: 0.6;
+}

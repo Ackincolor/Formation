@@ -1,4 +1,6 @@
-import './header.css'
+import LoginButton from '../loginButton/loginButton';
+import LogoutButton from '../loginButton/logoutButton';
+import UserInformation from '../userInformation/userInformation';
 
 const Header = () => {
     return (
@@ -10,7 +12,13 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     </div>
+                    <div className="d-flex align-items-center">
+                        <div className="navbar-item">
+                            <LoginButton></LoginButton>
+                        </div>
+                    </div>
                 </div>
+                
             </header>
         </>
     );

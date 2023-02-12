@@ -1,0 +1,24 @@
+.grid-tiers {
+  display: flex;
+  flex-direction: column;
+
+  > *:not(.card-tiers) {
+    align-self: center;
+    padding: 2rem;
+  }
+  
+  @include media-breakpoint-up(xl) {
+    align-items: center;
+    flex-direction: row;
+
+    > *:not(.card-tiers) {
+      align-self: inherit;
+      flex: 0 1 255px;
+      padding: 0 2rem;
+    }
+  }
+
+  .card-tiers {
+    flex: 1;
+  }
+}

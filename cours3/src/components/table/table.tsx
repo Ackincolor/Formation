@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react"
 import TableAction ,{TableActionProps} from "./tableAction/TableAction";
 
-import '../../assets/css/style2.css'
 
 type HeadCell<DataType> = {
     id: Extract<keyof DataType, string>;

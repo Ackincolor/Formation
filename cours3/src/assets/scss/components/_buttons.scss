@@ -1,0 +1,339 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+button.appearance-0 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+button:focus {
+  box-shadow: none !important;
+}
+
+.btn {
+  align-items: center;
+  display: inline-flex;
+  border-radius: .6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  justify-content: center;
+  transition: background-color .1s ease-in-out, color .1s ease-in-out;
+
+  // &:active,
+  &:active {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  &-md {
+    height: 4rem;
+    border-radius: .4rem;
+    line-height: 4rem;
+    padding: 0 1.8rem;
+  }
+
+  &-lg {
+    font-size: 1.3rem;
+    height: 5rem;
+    line-height: 5rem;
+    padding: 0 2rem;
+  }
+
+  &-x-xl {
+    @extend .btn-md;
+    
+    font-size: 1.2rem;
+    
+    @include media-breakpoint-up(sm) {
+      min-width: 22.5rem;
+    }
+  }
+
+  &-rounded {
+    border-radius: 2em;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: auto;
+    opacity: .3;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    margin-right: .8rem;
+    transition: opacity .1s ease-in-out;
+  }
+
+  .badge {
+    top: 0;
+  }
+}
+
+.btn-primary {
+  background-color: $purple-500;
+  border-color: $purple-500;
+
+  &:hover {
+    background-color: lighten($purple-500, 5%) !important;
+    border-color: lighten($purple-500, 5%) !important;
+  }
+
+  &:active {
+    background-color: $purple-500 !important;
+    border-color: $purple-500 !important;
+  }
+
+  &[aria-expanded="true"] {
+    .show {
+      display: none;
+    }
+
+    .hide {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  &[aria-expanded="false"] {
+    .show {
+      align-items: center;
+      display: flex;
+    }
+    
+    .hide {
+      display: none;
+    }
+  }
+}
+
+.btn-primary-bordered {
+  background-color: transparent;
+  border: 0;
+  box-shadow: 0px 0px 0px 3px rgba($purple-500, .3) inset;
+  color: $purple-500;
+
+  &:hover {
+    background-color: lighten($purple-500, 5%) !important;
+    border-color: lighten($purple-500, 5%) !important;
+    color: $white;
+
+    .icon.text-purple-500 {
+      color: $white !important;
+    }
+
+    .icon.opacity-60 {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    background-color: $purple-500 !important;
+    border-color: $purple-500 !important;
+    color: $white;
+  }
+}
+
+.btn-ghost {
+  background-color: #E4E6EB;
+  border-color: #E4E6EB;
+  color: $gray-900;
+
+  &:hover {
+    background-color: darken(#E4E6EB, 2.5%);
+    border-color: darken(#E4E6EB, 2.5%);
+  }
+}
+
+.btn-ghost-lighten {
+  background-color: #F7F8FA;
+  border-color: #F7F8FA;
+  color: $gray-900;
+
+  &:hover {
+    background-color: darken(#F7F8FA, 2.5%);
+    border-color: darken(#F7F8FA, 2.5%);
+  }
+}
+
+.btn-white {
+  background-color: rgba(255, 255, 255, .6);
+  border-color: rgba(255, 255, 255, .6);
+  color: $gray-900;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+  }
+}
+
+.btn-white-bordered {
+  background-color: $white;
+  border-color: $gray-200;
+  color: $gray-900;
+
+  &:hover {
+    background-color: #f7f7f7;
+  }
+}
+
+.btn-link {
+  color: $gray-500;
+  text-decoration: none;
+
+  &:hover {
+    color: $gray-900;
+  }
+}
+
+.btn-group-fill {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    margin: 0 -1rem;
+  }
+
+  .btn {
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      flex: 1;
+      margin: 0 1rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.btn-group-expanded {
+  display: flex;
+  flex-wrap: wrap;
+
+  .btn {
+    flex: 1;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    @include media-breakpoint-up(md) {
+      flex: inherit;
+      min-width: 25rem;
+    }
+
+    &:first-child {
+      flex: 0 1 auto;
+      margin-right: 2rem;
+  
+      @include media-breakpoint-down(lg) {
+        flex: 1;
+        margin-bottom: 2rem;
+        margin-right: 0;
+      }
+    }
+
+    &:last-child { margin-right: 0; }
+  }
+
+  .ml-auto {
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      margin-left: inherit !important;
+      width: 100%;
+    }
+  }
+}
+
+.btn-icon {
+  background-color: transparent;
+  align-items: center;
+  border: 0;
+  display: inline-flex;
+  height: 4rem;
+  position: relative;
+  justify-content: center;
+  user-select: none;
+  width: 4rem;
+
+  &-xs {
+    height: 2rem;
+    width: 2rem;
+
+    .badge svg.icon {
+      font-size: .8em;
+    }
+  }
+
+  &-white {
+    background-color: $white;
+    border-color: $white;
+    color: $gray-500 !important;
+  
+    &:active {
+      background-color: darken($white, 2.5%);
+      border-color: darken($white, 2.5%);
+      color: $gray-900 !important;
+    }
+  }
+
+  &-purple {
+    background-color: $purple-500;
+    border-color: $purple-500;
+    color: $white !important;
+  
+    &:active {
+      background-color: darken($purple-500, 2.5%);
+      border-color: darken($purple-500, 2.5%);
+    }
+  }
+
+  .badge {
+    bottom: -0.4rem;
+    font-size: .8rem;
+    font-weight: 900;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    padding: 0;
+    position: absolute;
+    right: -0.65rem;
+    top: inherit;
+    width: 1.6rem;
+  }
+
+  .icon {
+    margin: 0;
+    position: relative;
+  }
+}
+
+.btn-previous {
+  @extend .btn-icon;
+  @extend .btn-icon-white;
+  @extend .btn-rounded;
+
+  @include media-breakpoint-down(sm) { display: none; } 
+  
+  &-floating {
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.btn-floating {
+  border-radius: 2em;
+  bottom: 4rem;
+  box-shadow: 0 3px 13px 0 rgba(47, 49, 59, 0.15);
+  position: fixed;
+  right: 1.5rem;
+  font-size: 1.2rem;
+  padding: 0 2rem;
+
+  .icon {
+    color: $purple-500;
+  }
+}

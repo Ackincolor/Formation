@@ -1,0 +1,49 @@
+.panel-group {
+  .panel:first-child {
+    padding-top: 0;
+  }
+}
+
+.panel-default {
+  border-bottom: 1px solid $gray-100;
+  border: 0;
+  padding: 1.8rem 0;
+
+  .panel-heading {
+    background: none;
+    padding: 0;
+
+    // &.is-active {
+    //   .badge {
+    //     background: $purple-500 !important;
+    //     color: $white !important;
+    //   }
+
+    //   .text-color-active {
+    //     color: $purple-500 !important;
+    //   }
+    // }
+
+    button[type="button"] {
+      background: none;
+      border: 0;
+      color: $gray-400;
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
+      padding: 1rem;
+      transition: color .1s ease-in-out, transform .2s ease-in-out;
+
+      &:hover {
+        color: $gray-500;
+      }
+
+      &[aria-expanded="true"] {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .accordion-body {
+    padding-top: 1rem;
+  }
+}
