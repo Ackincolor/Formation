@@ -2,6 +2,7 @@ import LoginButton from '../loginButton/loginButton';
 import LogoutButton from '../loginButton/logoutButton';
 import UserInformation from '../userInformation/userInformation';
 
+import '../../App.scss'
 const Header = () => {
     return (
         <>
@@ -15,6 +16,10 @@ const Header = () => {
                     <div className="d-flex align-items-center">
                         <div className="navbar-item">
                             <LoginButton></LoginButton>
+                            <LogoutButton></LogoutButton>
+                        </div>
+                        <div className="navbar-item">
+                            <UserInformation></UserInformation>
                         </div>
                     </div>
                 </div>

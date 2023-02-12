@@ -38,10 +38,10 @@ function Menu() {
             
         </div>
         <div className="page-wrapper">
-        <Header />
-        <div className="page-content">
-            <Outlet/>
-        </div>
+            <Header />
+            <div className="page-content">
+                <Outlet/>
+            </div>
         </div>
         </>
     )

@@ -14,9 +14,9 @@
 // 1. Mixins
 @import './assets/scss/abstracts/mixins';
 
-@import
-  './assets/scss/vendors/select2',
-  './assets/scss/vendors/air-datepicker';
+//@import
+//  './assets/scss/vendors/select2',
+//  './assets/scss/vendors/air-datepicker';
 
 // 3. Base stuff
 @import
@@ -61,8 +61,4 @@
   './assets/scss/components/panels',
   './assets/scss/components/login';
 
-// 6. Page-specific styles
-@import
-  './assets/scss/pages/home',
-  './assets/scss/pages/tiers-list';
 
