@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import CardViewer from "../components/cardViewer/CardViewer";
 
 
 function Mpc() {
@@ -8,7 +9,12 @@ function Mpc() {
     setCount((count) => count + 1);
   }, []);
 
-  return <h1>I've rendered {count} times!</h1>;
+  return (
+    <>
+      <h1>I've rendered {count} times!</h1>
+      <CardViewer />
+    </>
+  );
 };
   
 export default Mpc;
