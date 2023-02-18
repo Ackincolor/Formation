@@ -1,8 +1,8 @@
-import React from 'react';
+import {useState} from 'react';
 
 import MenuItem from './menuItem'
-import { MenuProps } from './menuItem';     
-import { Outlet } from "react-router-dom";                                                                                                         
+import { MenuProps } from './menuItem';
+import { Outlet } from "react-router-dom";
 
 import {menuItems} from './menuItems.js';
 
@@ -12,6 +12,8 @@ import Header from '../header/Header';
 
 
 function Menu() {
+
+    let [menuOpen, setMenuOpen] = useState(true);
     return(
         <>
         <div className="sidebar">
@@ -35,7 +37,7 @@ function Menu() {
                 </button>
             </div>
             </div>
-            
+
         </div>
         <div className="page-wrapper">
             <Header />

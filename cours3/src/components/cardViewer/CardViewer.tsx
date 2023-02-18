@@ -31,12 +31,12 @@ function CardViewer() {
               <img
               src={fond[1]} className="card-item__bg" />
             </div>
-            
+
             <div className="card-item__wrapper">
               <div className="card-item__top">
                 <img src={chipimage.chip} className="card-item__chip" />
                 <div className="card-item__type">
-                    <img src={typecard.amex}  alt="" className="card-item__typeImg" />
+                    <img src={typecard.visa}  alt="" className="card-item__typeImg" />
                 </div>
               </div>
               <label htmlFor="cardNumber" className="card-item__number" >
@@ -77,12 +77,12 @@ function CardViewer() {
 
               </div>
                 <div className="card-item__type">
-                    <img src={typecard.amex} className="card-item__typeImg" />
+                    <img src={typecard.visa} className="card-item__typeImg" />
                 </div>
             </div>
           </div>
         </div>
-        <div className='mt-20'>
+        <div className='mt-20 w-100'>
             <button className="btn btn-ghost btn-md" onClick={handleCvv}>
                 code cvv ?
             </button>
