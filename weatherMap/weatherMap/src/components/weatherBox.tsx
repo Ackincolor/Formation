@@ -98,7 +98,7 @@ function WeatherBox() {
         <div className="search-box">
             <FontAwesomeIcon icon={faLocationDot} />
             <input type="text" value={searchValue} onChange={evt => setSearchValue(evt.target.value)} placeholder="Entrez votre localisation" />
-            <button className="" onClick={handleSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+            <button  onClick={handleSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
         </div>
 
         {errorBox}

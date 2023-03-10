@@ -6,7 +6,7 @@ import snow from "./snow.png"
 
 const images =  {
     "Clear":clear,
-    "Cloud": cloud,
+    "Clouds": cloud,
     "Mist": mist,
     "Rain" :  rain,
     "Snow" : snow
