@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg487"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="logocv1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview489"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.1754899"
+     inkscape:cx="103.27525"
+     inkscape:cy="73.616219"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs619" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(0,-10.357141)">
+    <path
+       id="rect543"
+       style="fill:#000000;stroke-width:0.318115"
+       d="m 0,10.357141 v 50 H 20.422603 L 16.834931,48.866899 30.434756,53.87415 42.012418,44.765626 41.749495,60.106265 42.078,60.357141 H 50 V 51.633592 L 47.720928,56.447071 42.222998,44.288255 29.713974,42.224786 38.85854,32.891051 36.833366,19.565759 47.982649,25.956997 50,24.850834 V 10.357141 H 24.849586 l -3.376491,2.633875 0.07461,2.758351 1.490301,0.139233 -1.440966,1.678494 0.120332,4.459943 -2.378351,-1.830559 -0.29842,0.34712 1.329659,6.15127 -5.386625,-2.615911 -5.074966,3.249837 0.668439,-6.271895 L 8.517039,19.146136 6.8600791,19.776854 7.3708847,18.08232 6.1110176,16.913918 7.8359646,16.539209 9.453817,11.170723 8.8653971,10.357141 Z M 17.929342,29.83691 h 4.713972 v 2.513249 h -4.713972 z" />
+  </g>
+</svg>
