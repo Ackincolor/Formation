@@ -1,0 +1,27 @@
+
+.wrapper{
+    max-width: 405px;
+    background: #fff;
+    margin: 137px auto;
+    padding: 28px;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.qrCodeWrapper {
+    margin-top:.5em;
+    display:flex;
+    width:100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.urlInput input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 20px 0 53px;
+    border: 1px solid #999;
+}

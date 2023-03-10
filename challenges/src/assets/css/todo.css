@@ -1,0 +1,211 @@
+::selection{
+    color: #fff;
+    background: #1e293b;
+}
+
+.wrapper{
+    max-width: 405px;
+    background: #fff;
+    margin: 137px auto;
+    padding: 28px 0 30px;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.todoInput{
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.todoInput img{
+    top: 50%;
+    position: absolute;
+    transform: translate(17px, -50%);
+}
+
+.todoInput input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 20px 0 53px;
+    border: 1px solid #999;
+}
+
+.todoInput input:focus, .todoInput input.active{
+    padding-left: 52px;
+    border: 2px solid #1e293b;
+}
+
+.todoInput input::placeholder{
+    color: #bfbfbf;
+}
+
+.controls, li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls{
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.filters span{
+    margin: 0 8px;
+    font-size: 17px;
+    color: #444;
+    cursor: pointer;
+}
+
+.filters span:first-child{
+    margin-left: 0;
+}
+
+.filters span.active{
+    color: #1e293b;
+}
+
+.controls .clear-btn{
+    border: none;
+    opacity: 0.6;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    background: #1e293b;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+    transition: transform 0.25s ease;
+}
+
+.clear-btn.active{
+    opacity: 0.9;
+    pointer-events: auto;
+}
+
+.clear-btn:active{
+    transform: scale(0.93);
+}
+
+.tache-box{
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 0 20px 10px 25px;
+}
+
+.tache-box.overflow{
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.tache-box::-webkit-scrollbar{
+    width: 5px;
+}
+
+.tache-box::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+
+.tache-box::-webkit-scrollbar-thumb{
+    background: #e6e6e6;
+    border-radius: 25px;
+}
+
+.tache-box .task{
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    align-items: flex-start;
+    border-bottom: 1px solid #ccc;
+}
+
+.tache-box .task:last-child{
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.tache-box .task label{
+    display: flex;
+    align-items: flex-start;
+}
+
+.tache-box label input{
+    margin-top: 7px;
+    accent-color: #1e293b;
+}
+
+.tache-box label p{
+    user-select: none;
+    margin-left: 12px;
+    word-wrap: break-word;
+}
+
+.task label p.checked{
+    text-decoration: line-through;
+}
+
+.tache-box .settings{
+    position: relative;
+}
+
+.settings :where(i, li){
+    cursor: pointer;
+}
+
+.settings .task-menu{
+    z-index: 10;
+    right: -5px;
+    bottom: -80px;
+    padding: 5px 0;
+    background: #fff;
+    position: absolute;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: top right;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.tache-box .task:last-child .task-menu{
+    bottom: 30px;
+    transform-origin: bottom right;
+}
+
+.tache-box .task:first-child .task-menu{
+    bottom: -80px;
+    transform-origin: top right;
+}
+
+.task-menu.show{
+    transform: scale(1);
+}
+
+.task-menu li{
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    padding: 17px 15px;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+
+.task-menu li:last-child{
+    margin-bottom: 0;
+}
+
+.settings li:hover{
+    background: #f5f5f5;
+}
+
+.settings li i{
+    padding-right: 8px;
+}
