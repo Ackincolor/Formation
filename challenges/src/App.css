@@ -1,3 +1,7 @@
+:root {
+  color-scheme: light only;
+}
+
 body{
   height: 100vh;
   display: flex;

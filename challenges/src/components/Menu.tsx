@@ -9,7 +9,7 @@ function Menu() {
         <nav>
             <ul>
                 <li>
-                    <NavLink to="day1"   >Day 1</NavLink>
+                    <NavLink to="day1">Day 1</NavLink>
                 </li>
                 <li>
                     <NavLink to="day2" >Day 2</NavLink>

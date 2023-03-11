@@ -1,0 +1,76 @@
+.budget {
+    position:relative;
+    grid-column: col / span 2;
+    grid-row: row ;
+    padding:1em;
+    margin:1em;
+    box-shadow: -6px -6px 10px rgba(255,255,255,0.45), 6px 6px 10px rgba(94,104,121,0.3);
+    border-radius: 5px;
+}
+.depences {
+    position:relative;
+    grid-column: col 3/ span 2;
+    grid-row: row ;
+    padding:1em;
+    margin:1em;
+    box-shadow: -6px -6px 10px rgba(255,255,255,0.45), 6px 6px 10px rgba(94,104,121,0.3);
+    border-radius: 5px;
+}
+.summary{
+    position:relative;
+    padding:1em;
+    grid-column: col / span 4;
+    grid-row: row 2 ;
+    margin:1em;
+    box-shadow: -6px -6px 10px rgba(255,255,255,0.45), 6px 6px 10px rgba(94,104,121,0.3);
+    border-radius: 5px;
+}
+.summary table{
+    width:100%;
+}
+.summary table th{
+    text-align: start;
+}
+.list{
+    position:relative;
+    padding:1em;
+    grid-column: col / span 4;
+    grid-row: row 3 ;
+    margin:1em;
+    box-shadow: -6px -6px 10px rgba(255,255,255,0.45), 6px 6px 10px rgba(94,104,121,0.3);
+    border-radius: 5px;
+}
+
+.inputWrapper {
+    width:100%;
+}
+.inputWrapper input{
+    width:100%;
+    height:50px;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+    border: 1px solid #999;
+    background-color: #d7deec;
+    margin-bottom: 1em;
+}
+.inputWrapper button {
+    padding: 0 10px 0 10px;
+    border: 1px solid #335fee;
+    background-color: #335fee;
+    color:white;
+    border-radius: 5px;
+    height:50px;
+}
+.inputWrapper button:hover {
+    border: 1px solid #597bec;
+    background-color: #597bec;
+}
+.containerBudget {
+    width:100%;
+    height:fit-content;
+    margin:2em;
+    display:grid;
+    background-color: #d7deec;
+    grid-template-columns: repeat(4, [col] 25% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+}
