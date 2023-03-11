@@ -2,28 +2,16 @@
     position:relative;
     grid-column: col / span 2;
     grid-row: row ;
-    padding:1em;
-    margin:1em;
-    box-shadow: -6px -6px 10px rgba(255,255,255,0.45), 6px 6px 10px rgba(94,104,121,0.3);
-    border-radius: 5px;
 }
 .depences {
     position:relative;
     grid-column: col 3/ span 2;
     grid-row: row ;
-    padding:1em;
-    margin:1em;
-    box-shadow: -6px -6px 10px rgba(255,255,255,0.45), 6px 6px 10px rgba(94,104,121,0.3);
-    border-radius: 5px;
 }
 .summary{
     position:relative;
-    padding:1em;
     grid-column: col / span 4;
     grid-row: row 2 ;
-    margin:1em;
-    box-shadow: -6px -6px 10px rgba(255,255,255,0.45), 6px 6px 10px rgba(94,104,121,0.3);
-    border-radius: 5px;
 }
 .summary table{
     width:100%;
@@ -33,11 +21,17 @@
 }
 .list{
     position:relative;
-    padding:1em;
     grid-column: col / span 4;
     grid-row: row 3 ;
+}
+.list table {
+    width: 100%
+}
+
+.innerdiv {
     margin:1em;
-    box-shadow: -6px -6px 10px rgba(255,255,255,0.45), 6px 6px 10px rgba(94,104,121,0.3);
+    padding:1em;
+    box-shadow: -6px -6px 10px var(--shadow-upperleft), 6px 6px 10px var(--shadow-bottomright);
     border-radius: 5px;
 }
 
@@ -50,27 +44,28 @@
     border-radius: 5px;
     padding: 0 10px 0 10px;
     border: 1px solid #999;
-    background-color: #d7deec;
+    background-color:  var(--secondary-background);
     margin-bottom: 1em;
 }
 .inputWrapper button {
     padding: 0 10px 0 10px;
-    border: 1px solid #335fee;
-    background-color: #335fee;
-    color:white;
+    /*background-color: var(--btn-primary);*/
+    background-color:  var(--secondary-background);
+    color:black;
     border-radius: 5px;
+    box-shadow: -6px -6px 10px var(--shadow-upperleft), 6px 6px 10px var(--shadow-bottomright);
     height:50px;
 }
 .inputWrapper button:hover {
-    border: 1px solid #597bec;
-    background-color: #597bec;
+    /*background-color: var(--btn-primary-hover);*/
+    box-shadow: -6px -6px 10px inset var(--shadow-upperleft), 6px 6px 10px inset var(--shadow-bottomright);
 }
 .containerBudget {
     width:100%;
     height:fit-content;
     margin:2em;
     display:grid;
-    background-color: #d7deec;
+    background-color: var(--secondary-background);
     grid-template-columns: repeat(4, [col] 25% ) ;
     grid-template-rows: repeat(3, [row] auto  );
 }

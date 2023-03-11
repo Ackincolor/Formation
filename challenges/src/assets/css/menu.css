@@ -1,5 +1,11 @@
 :root{
     --width-menu:200px;
+
+    --secondary-background: #e7e7e7;
+    --shadow-upperleft : rgba(255,255,255,0.45);
+    --shadow-bottomright : rgba(94,104,121,0.3);
+    --btn-primary : #335fee;
+    --btn-primary-hover : #597bec
 }
 
 .menuWrapper {

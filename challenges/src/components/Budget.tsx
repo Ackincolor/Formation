@@ -23,23 +23,25 @@ function Budget(){
 
     function handleAdd(){
         let newArray = [...depences];
-        newArray.push({name:newName, value:newPrice})
-        setDepences(newArray);
-        setNewName("");
-        setNewPrice(0);
+        if(newName !== ""){
+            newArray.push({name:newName, value:newPrice})
+            setDepences(newArray);
+            setNewName("");
+            setNewPrice(0);
+        }else {}
     }
 
     return(
         <>
         <div className="container containerBudget">
-            <div className="budget">
+            <div className="budget innerdiv">
                 <h3>Budget</h3>
                 <div className="inputWrapper">
                     <input type="number" placeholder="Montant Total" value={totalAmount} onInput={handleAmount}></input>
                     <button>Reset</button>
                 </div>
             </div>
-            <div className="depences">
+            <div className="depences innerdiv">
                 <h3>depences</h3>
                 <div className="inputWrapper">
                     <input placeholder="Nom de la depence" onInput={(event) => setNewName(event.currentTarget.value)}></input>
@@ -47,7 +49,7 @@ function Budget(){
                     <button onClick={(event) => handleAdd()}>ajouter</button>
                 </div>
             </div>
-            <div className="summary">
+            <div className="summary innerdiv">
                 <table>
                     <tr>
                         <th>Total</th>
@@ -61,10 +63,10 @@ function Budget(){
                     </tr>
                 </table>
             </div>
-            <div className="list">
+            <div className="list innerdiv">
                 <h3>liste des depences</h3>
                 <table>
-                {depences.map((item) => (<tr><td>{item.name}</td><td>{item.value}€</td></tr>))}
+                {depences.map((item) => (<tr><td>{item.name}</td><td>{item.value}€</td><td></td></tr>))}
                 </table>
             </div>
         </div>
