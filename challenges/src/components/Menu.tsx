@@ -23,6 +23,12 @@ function Menu() {
                 <li>
                     <NavLink to="day5" >Day 5</NavLink>
                 </li>
+                <li>
+                    <NavLink to="day6" >Day 6</NavLink>
+                </li>
+                <li>
+                    <NavLink to="day7" >Day 7</NavLink>
+                </li>
             </ul>
         </nav>
         </>

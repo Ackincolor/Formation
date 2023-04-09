@@ -6,6 +6,8 @@ import Day2 from "./pages/day2"
 import Day5 from "./pages/day5"
 import Day4 from "./pages/day4"
 import Day3 from "./pages/day3"
+import Day6 from "./pages/day6"
+import Day7 from "./pages/day7"
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
             <Route path="Day3" element={<Day3 />}/>
             <Route path="Day4" element={<Day4 />}/>
             <Route path="Day5" element={<Day5 />}/>
+            <Route path="Day6" element={<Day6 />}/>
+            <Route path="Day7" element={<Day7 />}/>
           </Route>
         </Routes>
       </BrowserRouter>
