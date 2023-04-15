@@ -3,7 +3,8 @@ import {
     createTheme,
     createThemeContract
   } from "@vanilla-extract/css";
-  
+
+
   const root = createGlobalTheme("#app", {
     space: {
       small: "4px",
@@ -30,6 +31,7 @@ import {
     primary: null,
     secondary: null,
     background: null,
+    backgroundTransparent:null,
     shadowColor:null,
     text: {
       normal: null,
@@ -40,7 +42,8 @@ import {
   export const lightTheme = createTheme(colors, {
     primary: "#1E40AF",
     secondary: "#DB2777",
-    background: "#EFF6FF",
+    background: "#F0F0F0",
+    backgroundTransparent:"#F0F0F08F",
     shadowColor:"#1515159A",
     text: {
       normal: "#1F2937",
@@ -51,7 +54,8 @@ import {
   export const darkTheme = createTheme(colors, {
     primary: "#60A5FA",
     secondary: "#F472B6",
-    background: "#1F2937",
+    background: "#000000",
+    backgroundTransparent:"#0000008F",
     shadowColor:"#EEEEEE9A",
     text: {
       normal: "#F9FAFB",

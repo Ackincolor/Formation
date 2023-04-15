@@ -1,25 +1,27 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import { darkTheme, lightTheme } from './styles/theme.css';
-import Header from './components/Header'
+import { BrowserRouter, Routes, Route} from "react-router-dom"
+import Layout from './components/Layout';
+import Competences from './pages/Competences';
+import Moi from './pages/Moi';
+import Parcours from './pages/Parcours';
 
-import { sprinkles } from "./styles/sprinkles.css";
 import "./styles/global.css";
-import Cv from './components/Cv';
-import CvItem from './components/CvItem';
+import "./App.css"
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   return (
-    <div id="app" className={isDarkTheme ? darkTheme : lightTheme}>
-      <Header switchTheme={setIsDarkTheme} isDarkTheme={isDarkTheme}></Header>
-      <Cv>
-        <CvItem title="Etudes" image="" content="Iut Senart Fontainbleau puis écoles d'ingenieur en system d'information" period='2014-2020'></CvItem>
-        <CvItem title="Dirisi" image="" content="Chef de projet pour de l'integration sur ServiceNow" period='2020-2022'></CvItem>
-        <CvItem title="Elcimai" image="" content='Devbeloppeur web Fulstack' period='2022-NOW'></CvItem>
-        <CvItem title="test" image="" content='je suis le contenu' period='2014-2019'></CvItem>
-      </Cv>
+    <div id="app" >
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Moi/>} />
+            <Route path="Parcours" element={<Parcours />} />
+            <Route path="Competences" element={<Competences />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
